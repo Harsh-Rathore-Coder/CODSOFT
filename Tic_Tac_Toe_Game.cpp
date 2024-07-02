@@ -25,19 +25,19 @@ bool placeMarker(int slot) {
 }
 
 int winner() {
-    // Check rows
+
     for (int i = 0; i < 3; i++) {
         if (grid[i][0] == grid[i][1] && grid[i][1] == grid[i][2] && grid[i][0] != ' ') {
             return current_player;
         }
     }
-    // Check columns
+
     for (int i = 0; i < 3; i++) {
         if (grid[0][i] == grid[1][i] && grid[1][i] == grid[2][i] && grid[0][i] != ' ') {
             return current_player;
         }
     }
-    // Check diagonals
+
     if (grid[0][0] == grid[1][1] && grid[1][1] == grid[2][2] && grid[0][0] != ' ') {
         return current_player;
     }
